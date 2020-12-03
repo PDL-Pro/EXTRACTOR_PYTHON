@@ -15,6 +15,11 @@ class PageCheckTest(unittest.TestCase):
         resultat1=page.pageExiste()
         self.assertFalse(resultat1)
 
+        page2=Pagecheck("www.ent.univ-rennes1.fr")
+        resultat2=page.pageExiste()
+        self.assertFalse(resultat2)
+
+
 
 
     def urlCheckTest(self):
@@ -29,5 +34,12 @@ class PageCheckTest(unittest.TestCase):
         nbTable=extrat.countTable("https://fr.wikipedia.org/wiki/Mairie_de_Rennes")
         TestNb = len(nbTable)    
         self.assertEqual(TestNb,2)
+        
+       extrat=Extractor("https://fr.wikipedia.org/wiki/Anglais")
+       nbTable=extrat.countTable("https://fr.wikipedia.org/wiki/Mairie_de_Rennes")
+       TestNb = len(nbTable)
+       self.assertEqual(TestNb,1)
+
+
  
 
