@@ -1,5 +1,5 @@
 from PageCheck import *
-from Extrator import *
+from Extractor import *
 from bs4 import BeautifulSoup
 import requests
 import os
