@@ -29,14 +29,5 @@ class PageCheckTest(unittest.TestCase):
         nbTable=extrat.countTable("https://fr.wikipedia.org/wiki/Mairie_de_Rennes")
         TestNb = len(nbTable)    
         self.assertEqual(TestNb,2)
-          #Test des liens 
-    def PageExisteTest(self):
-        page1=PageCheck(".org/wiki/France")
-        resultat=page.pageExiste()
-        self.assertFalse(resultat)
-        page2=PageCheck("/wiki/Capping")
-        resultat1=page.pageExiste()
-        self.assertFalse(resultat1)
-
  
 
